@@ -131,6 +131,116 @@ importers:
         specifier: ^4.15.0
         version: 4.15.0
 
+  apps/nextjs-prisma-crud:
+    dependencies:
+      "@hookform/resolvers":
+        specifier: ^3.1.0
+        version: 3.1.0(react-hook-form@7.44.3)
+      "@prisma/client":
+        specifier: ^4.15.0
+        version: 4.15.0(prisma@4.15.0)
+      "@types/node":
+        specifier: 20.3.1
+        version: 20.3.1
+      "@types/react":
+        specifier: 18.2.12
+        version: 18.2.12
+      "@types/react-dom":
+        specifier: 18.2.5
+        version: 18.2.5
+      autoprefixer:
+        specifier: 10.4.14
+        version: 10.4.14(postcss@8.4.24)
+      next:
+        specifier: 13.4.5
+        version: 13.4.5(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      postcss:
+        specifier: 8.4.24
+        version: 8.4.24
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-hook-form:
+        specifier: ^7.44.3
+        version: 7.44.3(react@18.2.0)
+      react-hot-toast:
+        specifier: ^2.4.1
+        version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
+      tailwind-merge:
+        specifier: ^1.12.0
+        version: 1.12.0
+      tailwindcss:
+        specifier: 3.3.2
+        version: 3.3.2(ts-node@10.9.1)
+      typescript:
+        specifier: 5.1.3
+        version: 5.1.3
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
+      zustand:
+        specifier: ^4.3.8
+        version: 4.3.8(react@18.2.0)
+    devDependencies:
+      prisma:
+        specifier: ^4.15.0
+        version: 4.15.0
+
+  apps/nextjs-prisma-nextauth:
+    dependencies:
+      "@prisma/client":
+        specifier: ^4.15.0
+        version: 4.15.0(prisma@4.15.0)
+      "@types/node":
+        specifier: 20.3.1
+        version: 20.3.1
+      "@types/react":
+        specifier: 18.2.12
+        version: 18.2.12
+      "@types/react-dom":
+        specifier: 18.2.5
+        version: 18.2.5
+      autoprefixer:
+        specifier: 10.4.14
+        version: 10.4.14(postcss@8.4.24)
+      bcryptjs:
+        specifier: ^2.4.3
+        version: 2.4.3
+      next:
+        specifier: 13.4.5
+        version: 13.4.5(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      next-auth:
+        specifier: ^4.22.1
+        version: 4.22.1(next@13.4.5)(react-dom@18.2.0)(react@18.2.0)
+      postcss:
+        specifier: 8.4.24
+        version: 8.4.24
+      prisma-client:
+        specifier: ^0.0.0
+        version: 0.0.0
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      tailwind-merge:
+        specifier: ^1.12.0
+        version: 1.12.0
+      tailwindcss:
+        specifier: 3.3.2
+        version: 3.3.2(ts-node@10.9.1)
+      typescript:
+        specifier: 5.1.3
+        version: 5.1.3
+    devDependencies:
+      prisma:
+        specifier: ^4.15.0
+        version: 4.15.0
+
   apps/t3-sample:
     dependencies:
       "@next-auth/prisma-adapter":
@@ -8624,6 +8734,34 @@ packages:
       cookie: 0.5.0
       jose: 4.14.4
       next: 13.4.2(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      oauth: 0.9.15
+      openid-client: 5.4.2
+      preact: 10.15.1
+      preact-render-to-string: 5.2.6(preact@10.15.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      uuid: 8.3.2
+    dev: false
+
+  /next-auth@4.22.1(next@13.4.5)(react-dom@18.2.0)(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-NTR3f6W7/AWXKw8GSsgSyQcDW6jkslZLH8AiZa5PQ09w1kR8uHtR9rez/E9gAq/o17+p0JYHE8QjF3RoniiObA==,
+      }
+    peerDependencies:
+      next: ^12.2.5 || ^13
+      nodemailer: ^6.6.5
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      "@babel/runtime": 7.22.3
+      "@panva/hkdf": 1.1.1
+      cookie: 0.5.0
+      jose: 4.14.4
+      next: 13.4.5(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.4.2
       preact: 10.15.1
