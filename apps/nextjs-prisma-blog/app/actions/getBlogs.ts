@@ -1,38 +1,29 @@
-import prisma from '../lib/prismadb'
+import prisma from "../lib/prismadb";
 
 export interface IBlogParams {
-  user?:string
+  user?: string;
   userId?: string;
-  categories?: string
+  categories?: string;
 }
 
-export default async function getBlogs(
-  params: IBlogParams
-) {
+export default async function getBlogs(params: IBlogParams) {
   try {
+    const { userId, categories } = params;
 
-    const {
-      userId,
-      categories
-    } = params
+    let query: any = {};
 
-    let query:any = {};
-
-    if(userId) {
-      query.userId = userId
+    if (userId) {
+      query.userId = userId;
     }
 
-    if(categories) {
-      query.categories = categories
+    if (categories) {
+      query.categories = categories;
     }
-
-
-    
 
     const listings = await prisma.listing.findMany({
-      where:query,
+      where: query,
       orderBy: {
-        createdAt: 'desc'
+        createdAt: "desc",
       },
     });
 

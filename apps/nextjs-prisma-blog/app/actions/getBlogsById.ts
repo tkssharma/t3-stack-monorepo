@@ -1,12 +1,10 @@
-import prisma from '../lib/prismadb'
- 
+import prisma from "../lib/prismadb";
+
 interface IParams {
   blogId: string;
 }
 
-export default async function getBlogsById(
-  params: IParams
-) {
+export default async function getBlogsById(params: IParams) {
   try {
     const { blogId } = params;
 
@@ -15,8 +13,8 @@ export default async function getBlogsById(
         id: blogId,
       },
       include: {
-        user: true
-      }
+        user: true,
+      },
     });
 
     if (!listing) {
@@ -30,9 +28,8 @@ export default async function getBlogsById(
         ...listing.user,
         createdAt: listing.user.createdAt.toString(),
         updatedAt: listing.user.updatedAt.toString(),
-        emailVerified: 
-          listing.user.emailVerified?.toString() || null,
-      }
+        emailVerified: listing.user.emailVerified?.toString() || null,
+      },
     };
   } catch (error: any) {
     throw new Error(error);
