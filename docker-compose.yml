@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+  postgres-user:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=api
+      - POSTGRES_PASSWORD=development_pass
+      - POSTGRES_MULTIPLE_DATABASES="test-api","test-api-testing"
+    volumes:
+      - ./docker-utils:/docker-entrypoint-initdb.d
+      - db_data:/data/postgres
+    ports:
+      - 5432:5432
   mongodb:
     build: .
     environment:
@@ -10,3 +22,5 @@ services:
       MONGO_REPLICA_PORT: 27017
     ports:
       - '27017:27017'
+volumes:
+  db_data: {}
